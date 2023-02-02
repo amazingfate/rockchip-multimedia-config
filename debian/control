@@ -8,6 +8,6 @@ Homepage: https://github.com/amazingfate/rockchip-multimedia-config
 Rules-Requires-Root: no
 
 Package: rockchip-multimedia-config
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, libv4l-0
 Description: System config for rockchip legacy multimedia
