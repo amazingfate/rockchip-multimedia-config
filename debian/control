@@ -1,0 +1,13 @@
+Source: rockchip-multimedia-config
+Section: libs
+Priority: optional
+Maintainer: Jianfeng Liu <liujianfeng1994@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: https://github.com/amazingfate/rockchip-multimedia-config
+Rules-Requires-Root: no
+
+Package: rockchip-multimedia-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libv4l-0
+Description: System config for rockchip legacy multimedia

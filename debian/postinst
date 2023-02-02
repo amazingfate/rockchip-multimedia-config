@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+case "$1" in
+	configure)
+		libdir=/usr/lib64
+		libv4l_filename=$(dpkg -L libv4l-0|grep libv4l2.so.0.0.0)
+		if [ -L $libdir ];then
+			echo "is link"
+			if [ -L ${libdir}/libv4l2.so ];then
+				rm -f ${libdir}/libv4l2.so
+			fi
+			cp ${libv4l_filename} ${libdir}/libv4l2.so
+		elif [ -d $libdir ];then
+			echo "dir already exist"
+			if [ -L ${libdir}/libv4l2.so ];then
+				rm -f ${libdir}/libv4l2.so
+			fi
+			cp ${libv4l_filename} ${libdir}/libv4l2.so
+		else
+			echo "dir not exist"
+			ln -s /lib /usr/lib64
+			if [ -L ${libdir}/libv4l2.so ];then
+				rm -f ${libdir}/libv4l2.so
+			fi
+			cp ${libv4l_filename} ${libdir}/libv4l2.so
+		fi
+		;;
+esac
