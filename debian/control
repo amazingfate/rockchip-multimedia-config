@@ -9,5 +9,5 @@ Rules-Requires-Root: no
 
 Package: rockchip-multimedia-config
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, libv4l-0
+Depends: ${shlibs:Depends}, ${misc:Depends}, libv4l-0, udev
 Description: System config for rockchip legacy multimedia
