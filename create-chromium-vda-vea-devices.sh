@@ -8,7 +8,7 @@ case "$(cat /proc/device-tree/compatible)" in
 			echo "max-height=4320"
 		} > /dev/video-dec0
 		;;
-	*rk3568*)
+	*rk356*)
 		{
 			echo "type=dec"
 			echo "codecs=VP8:VP9:H.264:H.265"
