@@ -5,7 +5,7 @@ set -e
 case "$1" in
 	configure)
 		libdir=/usr/lib64
-		libv4l_filename=$(dpkg -L libv4l-0|grep libv4l2.so.0.0.0)
+		libv4l_filename=$(dpkg -L $(dpkg -l|grep libv4l-0|awk '{print $2}'|awk -F ':' '{print $1}')|grep libv4l2.so.0.0.0)
 		if [ -L $libdir ];then
 			echo "is link"
 			if [ -L ${libdir}/libv4l2.so ];then
