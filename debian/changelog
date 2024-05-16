@@ -1,3 +1,19 @@
+rockchip-multimedia-config (1.0.2+noble) noble; urgency=medium
+
+  * Update to 1.0.2
+  * Remove dep libv4l-0 and add triggers of libv4l2.so.0.0.0
+
+ -- Jianfeng Liu <liujianfeng1994@gmail.com>  Thu, 16 May 2024 18:40:43 +0800
+
+rockchip-multimedia-config (1.0.1+noble) noble; urgency=medium
+
+  * Update to 1.0.1
+  * Fix libv4l-0 package name
+  * Add other rk356x socs support like rk3566
+  * Update udev rule for cma and system from Joshua Riek
+
+ -- Jianfeng Liu <liujianfeng1994@gmail.com>  Wed, 15 May 2024 10:50:33 +0800
+
 rockchip-multimedia-config (1.0.0-1+jammy) jammy; urgency=medium
 
   * Package for jammy
